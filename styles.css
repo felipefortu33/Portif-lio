@@ -1,0 +1,425 @@
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.secao {
+    padding: 80px 5%;
+    text-align: center;
+    background: rgba(0, 31, 63, 0.9); /* Transparente inicialmente */
+}
+
+.titulo-secao {
+    padding: 35px 20px; /* Mais equilíbrio no espaçamento interno */
+    font-size: 38px; /* Tamanho ainda maior para realce */
+    font-weight: 700; /* Negrito para maior destaque */
+    text-transform: uppercase; /* Maiúsculas para aumentar a autoridade */
+    letter-spacing: 2px; /* Mais espaçamento entre letras para sofisticação */
+    color: #4d7cfe; /* Cor moderna e vibrante */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efeito de sombra para profundidade */
+    
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(0, 31, 63, 0.9); /* Transparente inicialmente */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Header ao rolar a página */
+.header-scroll {
+    background: #001f3f;
+    padding: 10px 5%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animação para suavizar a transição */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+ul li a:hover {
+    color: #4d7cfe;
+}
+
+.principal {
+    background: linear-gradient(135deg, #001f3f, #005f99);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 120px 5% 60px;
+}
+
+.principal h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.principal h1 span {
+    color: #4d7cfe;
+}
+
+.principal p {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 30px;
+    
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4d7cfe;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #375bb5;
+    transform: scale(1.05);
+}
+
+.grade-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 5%;
+}
+
+.card-projeto {
+    background-color: #161616;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-projeto:hover {
+    transform: scale(1.05);
+}
+
+.img-projeto {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 5%;
+    text-align: left;
+}
+
+.img-sobre {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.texto-sobre {
+    max-width: 600px;
+    font-size: 18px;
+    color: #bbb;
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+.tag-habilidades {
+    background-color: rgba(77, 124, 254, 0.2);
+    color: #4d7cfe;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.botoes-contato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+
+.botao-contato {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 500;
+    min-width: 160px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.botao-contato:hover {
+    transform: translateY(-5px);
+    opacity: 0.9;
+}
+
+.whatsapp { background-color: #25d366; }
+.email { background-color: #EA4335; }
+.linkedin { background-color: #0077B5; }
+.github { background-color: #333; }
+
+footer {
+    padding: 20px 5%;
+    text-align: center;
+    background: rgba(0, 31, 63, 0.95); /* Fundo ligeiramente mais opaco */
+    color: #bbb; /* Cor do texto para contraste */
+    font-size: 16px;
+    letter-spacing: 0.5px; /* Espaçamento entre letras para melhorar a legibilidade */
+    transition: all 0.3s ease-in-out; /* Transição suave para mudanças */
+}
+
+footer:hover {
+    background: #001f3f; /* Efeito de destaque ao passar o mouse */
+    color: #fff; /* Texto mais claro no hover */
+}
+footer a {
+    color: #bbb; /* Cor do link para contraste */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .principal h1 {
+        font-size: 50px;
+    }
+    .principal p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 5%;
+    }
+    ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .principal {
+        padding-top: 140px;
+    }
+    .principal h1 {
+        font-size: 40px;
+    }
+    .principal p {
+        font-size: 16px;
+    }
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+    .img-sobre {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .principal h1 {
+        font-size: 32px;
+    }
+    .principal p {
+        font-size: 14px;
+    }
+    .botao {
+        padding: 12px 25px;
+    }
+}
+
+/* Estilizando a seção de projetos */
+.secao {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.titulo-secao {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Estilização do Swiper */
+.swiper {
+    width: 80%;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide a{
+    color: #bbb;
+}
+
+.card-projeto {
+    background: linear-gradient(135deg, #001f3f, #005f99);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 320px;
+    transition: transform 0.3s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+}
+
+.img-projeto {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fbfcfc;
+}
+
+/* Paginação */
+.swiper-pagination-bullet {
+    background: #00AEEF;
+}
+
+
+/* Seção Sobre Mim */
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #001f3f, #005f99);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.img-sobre {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 6px solid #00AEEF;
+    box-shadow: 0px 6px 15px rgba(0, 174, 239, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.img-sobre:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 8px 20px rgba(0, 174, 239, 0.7);
+}
+
+.conteudo-sobre {
+    max-width: 600px;
+}
+
+.conteudo-sobre h2 {
+    font-size: 28px;
+    color: #00AEEF;
+}
+
+.conteudo-sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tag-habilidades {
+    background: #00AEEF;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tag-habilidades:hover {
+    transform: scale(1.1);
+}
+
+
